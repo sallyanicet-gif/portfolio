@@ -173,25 +173,32 @@
         </div>
       </div>
 
-      <!-- CV Section -->
-      <div class="cv-section aos">
-        <h3 class="cv-section-title">📄 Mon CV</h3>
-        <div class="cv-embed-wrapper">
-          <iframe
-            src="images/CV_ANICET_Neidjah.pdf"
-            class="cv-iframe"
-            title="CV Neidjah Anicet"
-          ></iframe>
-          <div class="cv-embed-actions">
-            <a href="images/CV_ANICET_Neidjah.pdf" target="_blank" class="cv-btn cv-btn-view">
-              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-              Visualiser
-            </a>
-            <a href="images/CV_ANICET_Neidjah.pdf" download="CV_ANICET_Neidjah.pdf" class="cv-btn cv-btn-dl">
-              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-              Télécharger
-            </a>
+      <!-- CV Button -->
+      <div class="cv-btns-about aos">
+        <button class="cv-btn cv-btn-view" onclick="openCVModal()">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Voir mon CV
+        </button>
+        <a href="images/CV_ANICET_Neidjah.pdf" download="CV_ANICET_Neidjah.pdf" class="cv-btn cv-btn-dl">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Télécharger
+        </a>
+      </div>
+
+      <!-- CV Modal Overlay -->
+      <div id="cv-modal" class="cv-modal" onclick="if(event.target===this)closeCVModal()">
+        <div class="cv-modal-box">
+          <div class="cv-modal-header">
+            <span class="cv-modal-title">📄 CV — Neidjah Anicet</span>
+            <div class="cv-modal-actions">
+              <a href="images/CV_ANICET_Neidjah.pdf" download="CV_ANICET_Neidjah.pdf" class="cv-btn cv-btn-dl" style="padding:6px 12px;font-size:.75rem;">
+                <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Télécharger
+              </a>
+              <button class="cv-modal-close" onclick="closeCVModal()" aria-label="Fermer">✕</button>
+            </div>
           </div>
+          <iframe src="images/CV_ANICET_Neidjah.pdf" class="cv-modal-iframe" title="CV Neidjah Anicet"></iframe>
         </div>
       </div>
 
@@ -326,7 +333,7 @@
             <div class="email-icon">✉</div>
             <div>
               <p class="email-label">Email</p>
-              <p class="email-address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90fef5f9f4faf1f8bef1fef9f3f5e4d0f7fdf1f9fcbef3fffd">[email&#160;protected]</a></p>
+              <p class="email-address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d03080409070c05430c03040e08192d0a000c0401430e0200">[email&#160;protected]</a></p>
             </div>
           </div>
           <div class="social-links">
@@ -357,5 +364,18 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+function openCVModal() {
+  document.getElementById('cv-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCVModal() {
+  document.getElementById('cv-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCVModal();
+});
+</script>
 </body>
 </html>
