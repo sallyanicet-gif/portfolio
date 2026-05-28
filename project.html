@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&display=swap"
       rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/Netmeeting.png">
+    <link rel="shortcut icon" href="images/Netmeeting.png" />
   </head>
   <body>
     <canvas id="particles"></canvas>
@@ -268,7 +268,7 @@
             <div class="project-image">
               <img src="images/film1.png" alt="Projet Audiovisuel" />
               <div class="project-overlay">
-                <a href="#" class="project-link-btn"
+                <a href="https://youtu.be/Y85a9M9mVBk" class="project-link-btn"
                   ><svg width="18" height="18" fill="none" stroke="#111" viewBox="0 0 24 24">
                     <path
                       stroke-linecap="round"
@@ -287,9 +287,11 @@
 
           <div class="project-card aos" data-tags="Production graphique,Illustration">
             <div class="project-image">
-              <img src="images/hfxhfx.png" alt="Composition" />
+              <img src="http://www.image-heberg.fr/files/17799338442153270799.png" alt="affiche blackpink" />
               <div class="project-overlay">
-                <a href="#" class="project-link-btn"
+                <a
+                  href="http://www.image-heberg.fr/files/17799338442153270799.png"
+                  class="project-link-btn"
                   ><svg width="18" height="18" fill="none" stroke="#111" viewBox="0 0 24 24">
                     <path
                       stroke-linecap="round"
@@ -300,11 +302,11 @@
               </div>
             </div>
             <div class="project-content">
-              <h3>Composition Graphique</h3>
+              <h3>Visuel Web Blackpink</h3>
               <p>Montage et direction artistique.</p>
               <div class="project-tags">
                 <span class="tag" data-tag="production graphique">Design</span
-                ><span class="tag" data-tag="illustration">Art</span>
+                ><span class="tag" data-tag="illustration">Affiche</span>
               </div>
             </div>
           </div>
@@ -327,6 +329,29 @@
               <p>Direction artistique et management de project.</p>
               <div class="project-tags">
                 <span class="tag" data-tag="Audiovisuel">Audiovisuel</span>
+              </div>
+            </div>
+          </div>
+   <div class="project-card aos" data-tags="illustration">
+            <div class="project-image">
+              <img src="http://www.image-heberg.fr/files/17799349731072417184.png" alt="axell affiche-1.png" />
+              <div class="project-overlay">
+                <a href="https://drive.google.com/file/d/11WxYHSJiqjsr2f_F0ArDcBD5uq_tXjYu/view?usp=sharing" class="project-link-btn"
+                  ><svg width="18" height="18" fill="none" stroke="#111" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Affiche Evelynne Axell</h3>
+              <p>Affiche pour l'exposition fictive de Evelynne Axell au Musée d'art contemporain</p>
+              <div class="project-tags">
+              <span class="tag" data-tag="production graphique">Design</span
+                ><span class="tag" data-tag="illustration">Affiche</span>
               </div>
             </div>
           </div>
@@ -358,10 +383,17 @@
           <div class="proj-modal-tags" id="proj-modal-tags"></div>
           <h2 class="proj-modal-title" id="proj-modal-title"></h2>
           <p class="proj-modal-desc" id="proj-modal-desc"></p>
-          <a id="proj-modal-link" href="#" target="_blank" class="btn btn-primary proj-modal-btn">
+          <a
+            id="proj-modal-link"
+            href="http://www.image-heberg.fr/files/17799338442153270799.png"
+            target="_blank"
+            class="btn btn-primary proj-modal-btn">
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
             Ouvrir le projet ↗
           </a>
@@ -369,187 +401,15 @@
       </div>
     </div>
 
-    <style>
-      /* ── Modal overlay ── */
-      .proj-modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 9000;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-      }
-      .proj-modal.open { display: flex; }
-
-      .proj-modal-backdrop {
-        position: absolute;
-        inset: 0;
-        background: rgba(8, 3, 18, 0.92);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        animation: backdropIn .2s ease;
-      }
-      @keyframes backdropIn { from { opacity: 0; } to { opacity: 1; } }
-
-      .proj-modal-box {
-        position: relative;
-        z-index: 1;
-        background: linear-gradient(160deg, rgba(28,8,52,.98) 0%, rgba(15,4,32,.98) 100%);
-        border: 1px solid rgba(170,68,238,.3);
-        border-radius: 20px;
-        width: min(920px, 100%);
-        max-height: 92vh;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        animation: modalIn .32s cubic-bezier(.34,1.46,.64,1);
-        box-shadow: 0 0 80px rgba(136,0,204,.3), 0 30px 80px rgba(0,0,0,.7);
-      }
-      @keyframes modalIn {
-        from { opacity: 0; transform: scale(.9) translateY(24px); }
-        to   { opacity: 1; transform: scale(1) translateY(0); }
-      }
-
-      .proj-modal-close {
-        position: absolute;
-        top: 14px; right: 14px;
-        z-index: 10;
-        background: rgba(20,8,40,.8);
-        border: 1px solid rgba(170,68,238,.5);
-        color: #e0c8ff;
-        border-radius: 50%;
-        width: 38px; height: 38px;
-        font-size: 1rem;
-        cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        transition: background .2s, transform .2s;
-      }
-      .proj-modal-close:hover { background: rgba(204,0,102,.5); transform: scale(1.12) rotate(90deg); }
-
-      /* ── Content zone ── */
-      .proj-modal-content {
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        overflow: hidden;
-        flex-shrink: 0;
-        background: #0a0416;
-        min-height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* Full-size image */
-      .proj-modal-content img.proj-full-img {
-        width: 100%;
-        max-height: 520px;
-        object-fit: contain;
-        object-position: center;
-        display: block;
-        background: #0a0416;
-      }
-
-      /* Iframe (sites web, YouTube) */
-      .proj-modal-content iframe.proj-iframe {
-        width: 100%;
-        height: 480px;
-        border: none;
-        display: block;
-      }
-
-      /* Placeholder (Google Drive, lien non-embeddable) */
-      .proj-modal-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding: 3rem 2rem;
-        text-align: center;
-        width: 100%;
-      }
-      .proj-modal-placeholder .ph-thumb {
-        width: 100%;
-        max-height: 320px;
-        object-fit: contain;
-        border-radius: 10px;
-        opacity: .85;
-      }
-      .proj-modal-placeholder .ph-label {
-        color: rgba(200,180,230,.5);
-        font-size: .8rem;
-        margin-top: .5rem;
-      }
-
-      /* ── Info body ── */
-      .proj-modal-body {
-        padding: 1.4rem 1.8rem 1.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: .75rem;
-      }
-
-      .proj-modal-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
-      .proj-modal-tags .tag {
-        background: rgba(136,0,204,.2);
-        border: 1px solid rgba(170,68,238,.35);
-        color: #c084fc;
-        border-radius: 20px;
-        padding: 3px 12px;
-        font-size: .72rem;
-        font-weight: 600;
-        letter-spacing: .05em;
-        text-transform: uppercase;
-      }
-
-      .proj-modal-title {
-        font-family: 'Bebas Neue', 'Syne', sans-serif;
-        font-size: clamp(1.6rem, 5vw, 2.4rem);
-        font-weight: 800;
-        background: linear-gradient(to right, #c084fc, #f472b6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 0;
-        line-height: 1.1;
-      }
-
-      .proj-modal-desc {
-        color: rgba(200,180,230,.75);
-        font-size: .93rem;
-        line-height: 1.65;
-        margin: 0;
-      }
-
-      .proj-modal-btn {
-        align-self: flex-start;
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        margin-top: .2rem;
-      }
-      .proj-modal-btn.hidden { display: none; }
-
-      /* Make cards clickable */
-      .project-card { cursor: pointer; }
-      .project-card:focus-visible { outline: 2px solid #c084fc; outline-offset: 4px; }
-
-      @media (max-width: 600px) {
-        .proj-modal-content iframe.proj-iframe { height: 240px; }
-        .proj-modal-content img.proj-full-img { max-height: 280px; }
-        .proj-modal-body { padding: 1rem 1.1rem 1.2rem; }
-      }
-    </style>
-
     <script>
       /* ── Project Modal ── */
 
       function getLinkType(url) {
-        if (!url || url === '#') return 'none';
-        if (/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/i.test(url)) return 'image';
-        if (/youtube\.com|youtu\.be/.test(url)) return 'youtube';
-        if (/drive\.google\.com/.test(url)) return 'drive';
-        return 'site';
+        if (!url || url === "#") return "none";
+        if (/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/i.test(url)) return "image";
+        if (/youtube\.com|youtu\.be/.test(url)) return "youtube";
+        if (/drive\.google\.com/.test(url)) return "drive";
+        return "site";
       }
 
       function getYoutubeEmbed(url) {
@@ -563,106 +423,113 @@
       }
 
       function openProjectModal(thumbSrc, title, desc, tagsHtml, linkHref) {
-        const modal   = document.getElementById('project-modal');
-        const content = document.getElementById('proj-modal-content');
-        const btn     = document.getElementById('proj-modal-link');
+        const modal = document.getElementById("project-modal");
+        const content = document.getElementById("proj-modal-content");
+        const btn = document.getElementById("proj-modal-link");
 
         // -- build content zone --
-        content.innerHTML = '';
+        content.innerHTML = "";
         const type = getLinkType(linkHref);
 
-        if (type === 'image') {
+        if (type === "image") {
           // Show the full-res image directly
-          const img = document.createElement('img');
-          img.className = 'proj-full-img';
+          const img = document.createElement("img");
+          img.className = "proj-full-img";
           img.src = linkHref;
           img.alt = title;
           content.appendChild(img);
-
-        } else if (type === 'youtube') {
+        } else if (type === "youtube") {
           const embedUrl = getYoutubeEmbed(linkHref);
           if (embedUrl) {
-            const iframe = document.createElement('iframe');
-            iframe.className = 'proj-iframe';
+            const iframe = document.createElement("iframe");
+            iframe.className = "proj-iframe";
             iframe.src = embedUrl;
-            iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+            iframe.allow = "autoplay; fullscreen; picture-in-picture";
             iframe.allowFullscreen = true;
             content.appendChild(iframe);
           }
-
-        } else if (type === 'site') {
+        } else if (type === "site") {
           // Embed the site in an iframe; fallback thumbnail shown if blocked
-          const wrap = document.createElement('div');
-          wrap.className = 'proj-modal-placeholder';
+          const wrap = document.createElement("div");
+          wrap.className = "proj-modal-placeholder";
 
-          const thumb = document.createElement('img');
-          thumb.className = 'ph-thumb';
+          const thumb = document.createElement("img");
+          thumb.className = "ph-thumb";
           thumb.src = thumbSrc;
           thumb.alt = title;
           wrap.appendChild(thumb);
 
-          const lbl = document.createElement('p');
-          lbl.className = 'ph-label';
-          lbl.textContent = 'Aperçu non disponible — cliquez sur le bouton pour ouvrir le site ↗';
+          const lbl = document.createElement("p");
+          lbl.className = "ph-label";
+          lbl.textContent = "Aperçu non disponible — cliquez sur le bouton pour ouvrir le site ↗";
           wrap.appendChild(lbl);
           content.appendChild(wrap);
-
         } else {
           // Google Drive or no link — show thumbnail full size
-          const img = document.createElement('img');
-          img.className = 'proj-full-img';
+          const img = document.createElement("img");
+          img.className = "proj-full-img";
           img.src = thumbSrc;
           img.alt = title;
           content.appendChild(img);
         }
 
         // -- fill text --
-        document.getElementById('proj-modal-title').textContent = title;
-        document.getElementById('proj-modal-desc').textContent  = desc;
-        document.getElementById('proj-modal-tags').innerHTML    = tagsHtml;
+        document.getElementById("proj-modal-title").textContent = title;
+        document.getElementById("proj-modal-desc").textContent = desc;
+        document.getElementById("proj-modal-tags").innerHTML = tagsHtml;
 
-        if (linkHref && linkHref !== '#') {
+        // -- bouton : toujours visible, grisé si pas de lien réel --
+        const btnIcon = `<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>`;
+        if (linkHref && linkHref !== "#") {
           btn.href = linkHref;
-          btn.classList.remove('hidden');
+          btn.innerHTML = btnIcon + " Ouvrir le projet ↗";
+          btn.classList.remove("disabled");
         } else {
-          btn.classList.add('hidden');
+          btn.href = "#";
+          btn.innerHTML = btnIcon + " Projet bientôt disponible";
+          btn.classList.add("disabled");
         }
 
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
       }
 
       function closeProjectModal() {
-        const modal = document.getElementById('project-modal');
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
+        const modal = document.getElementById("project-modal");
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
         // stop iframes (e.g. YouTube autoplay)
-        document.getElementById('proj-modal-content').innerHTML = '';
+        document.getElementById("proj-modal-content").innerHTML = "";
       }
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeProjectModal();
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeProjectModal();
       });
 
       /* Attach click handlers to all project cards */
-      document.querySelectorAll('#projects-grid .project-card').forEach(card => {
-        card.setAttribute('tabindex', '0');
+      document.querySelectorAll("#projects-grid .project-card").forEach((card) => {
+        card.setAttribute("tabindex", "0");
 
-        card.addEventListener('click', (e) => {
-          if (e.target.closest('.project-link-btn')) return; // let the icon link work normally
+        card.addEventListener("click", (e) => {
+          if (e.target.closest(".project-link-btn")) return; // let the icon link work normally
 
-          const img    = card.querySelector('.project-image img');
-          const title  = card.querySelector('.project-content h3')?.textContent.trim() || '';
-          const desc   = card.querySelector('.project-content p')?.textContent.trim()  || '';
-          const tagsEl = card.querySelectorAll('.project-tags .tag');
-          const tagsHtml = Array.from(tagsEl).map(t => `<span class="tag">${t.textContent}</span>`).join('');
-          const link   = card.querySelector('.project-link-btn')?.getAttribute('href') || '#';
+          const img = card.querySelector(".project-image img");
+          const title = card.querySelector(".project-content h3")?.textContent.trim() || "";
+          const desc = card.querySelector(".project-content p")?.textContent.trim() || "";
+          const tagsEl = card.querySelectorAll(".project-tags .tag");
+          const tagsHtml = Array.from(tagsEl)
+            .map((t) => `<span class="tag">${t.textContent}</span>`)
+            .join("");
+          const link = card.querySelector(".project-link-btn")?.getAttribute("href") || "#";
 
-          openProjectModal(img?.src || '', title, desc, tagsHtml, link);
+          openProjectModal(img?.src || "", title, desc, tagsHtml, link);
         });
 
-        card.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            card.click();
+          }
         });
       });
     </script>
